@@ -1,0 +1,61 @@
+@use '../util' as *;
+
+// block 
+.s-card {
+    border-radius: rem(15);
+    background-color: var(--darkdesaturatedblue);
+
+    // element 
+    &__text {
+        padding: rem(0) rem(10) rem(0) rem(10);
+
+        @include breakpoint-down(xsmall) {
+            padding: rem(0) rem(30) rem(0) rem(30);
+        }
+    }
+    &__stats {
+        padding: 0;
+        padding-bottom: rem(20);
+        list-style: none;
+
+        .list-item {
+            letter-spacing: rem(1);
+            font-family: var(--font-main);
+            &__number {
+                font-weight: 700;
+                font-size: rem(22);
+                color: var(--white);
+            }
+            &__title {
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: rem(12);
+                color: var(--slightlytransparentwhite2);
+            }
+        }
+    }
+
+    //modifiers 
+    &--img {
+        max-width: 100%;
+        height: auto;
+        border-radius: rem(10);
+        padding-bottom: rem(40);
+    }
+    &--header {
+        letter-spacing: rem(1);
+        font-weight: bold;
+        font-size: rem(22);
+        font-family: var(--font-main);
+        color: var(--white);   
+    }
+    &--text {
+        padding: rem(10) rem(0) rem(10) rem(0);
+        font-family: var(--font-main);
+        color: var(--slightlytransparentwhite2);
+    
+    }
+    span {
+        color: var(--softviolet);
+    }
+}
